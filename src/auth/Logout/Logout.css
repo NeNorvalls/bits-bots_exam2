@@ -1,0 +1,19 @@
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
