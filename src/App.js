@@ -10,6 +10,7 @@ import Logout from "./auth/Logout/Logout.jsx";
 import LoginForm from "./auth/Login/Login";
 import RegisterForm from "./auth/Register/Register";
 import { CartProvider } from "./utils/CartContext/cartContext";
+import "./App.scss";
 import Modal from "react-modal";
 
 const initialCart = JSON.parse(localStorage.getItem("cart")) || [];

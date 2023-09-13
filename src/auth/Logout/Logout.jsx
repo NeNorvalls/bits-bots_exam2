@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Logout.scss'
 
 const Logout = ({ setIsLoggedIn }) => {
   const navigate = useNavigate()

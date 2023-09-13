@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+$font-helvetica: "Helvetica", sans-serif;
+$font-arial: "Arial", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+
+body {
+  font-family: $font-roboto, $font-helvetica, $font-arial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-helvetica, $font-arial, sans-serif;
+}
+
+p {
+  font-family: $font-roboto, $font-helvetica, $font-arial;
+}
+
+.header {
+  font-family: $font-helvetica, $font-arial, sans-serif;
+}
+
+.button {
+  font-family: $font-roboto, $font-helvetica, $font-arial;
+}
