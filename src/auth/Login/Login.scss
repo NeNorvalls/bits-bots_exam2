@@ -1,5 +1,5 @@
 .login-form {
-  background-color: brown;
+  background-color: #3023c7;
   margin: 0 auto;
   width: 350px;
   padding: 20px;
@@ -59,7 +59,7 @@
   &__submit-btn {
     font-size: 18px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #bd262b;
     color: #fff;
     margin-top: 1rem;
     border: none;
@@ -67,7 +67,8 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #ffbf00;
+      color: #16191e;
     }
 
     @media (max-width: 768px) {
