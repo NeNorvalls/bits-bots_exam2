@@ -28,11 +28,7 @@
             transform: translateY(-5px);
           }
 
-          &__image {
-            max-width: 100%;
-            height: auto;
-          }
-
+          &__image,
           &__body {
             padding: 10px;
           }
@@ -66,11 +62,6 @@
 
               &:hover {
                 background-color: #0056b3;
-              }
-
-              &--buy {
-                margin-top: 10px;
-                background-color: #bd262b;
               }
 
               &--buy {
