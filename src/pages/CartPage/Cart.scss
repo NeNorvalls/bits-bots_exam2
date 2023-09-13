@@ -71,6 +71,10 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+
+  &:hover {
+    background-color: #a21f24;
+  }
 }
 
 .cart-summary {
@@ -97,6 +101,10 @@
   cursor: pointer;
   font-size: 16px;
   margin-right: 10px;
+
+  &:hover {
+    background-color: #a21f24;
+  }
 }
 
 .cart-summary__confirm-btn {
@@ -107,4 +115,8 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+
+  &:hover {
+    background-color: #001a8c;
+  }
 }
