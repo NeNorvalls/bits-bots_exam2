@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+import ScrollToTop from "./utils/ScrollTop/ScrollTop";
 import Footer from "./components/Footer/Footer";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import BrowsePage from "./pages/BrowsePage/BrowsePage.jsx";
@@ -49,6 +50,7 @@ const App = () => {
             element={<Logout setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
+        <ScrollToTop />
         <Footer />
       </CartProvider>
     </Router>

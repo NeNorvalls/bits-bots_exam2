@@ -42,7 +42,7 @@
 
     &:hover {
       .bar {
-        background-color: #555;
+        background-color: #ffbf00;
       }
     }
   }
@@ -90,11 +90,13 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       flex-direction: column;
       width: 100%;
+      color: #16191e;
 
       &-item {
         margin: 10px;
         width: 100%;
         text-align: center;
+        color: #16191e;
 
         &:hover {
           background-color: #f0f0f0;

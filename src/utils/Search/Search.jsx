@@ -71,7 +71,7 @@ const Search = ({ handleAddGameOrCategory }) => {
     <Container>
       <Form>
         <Form.Group controlId="search">
-          <Form.Label className="search-label">
+          <Form.Label className="search-label my-2">
             Search by Game Title:
           </Form.Label>
           <Form.Control

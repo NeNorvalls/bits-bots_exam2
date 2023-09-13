@@ -38,6 +38,11 @@
       border: 1px solid #ccc;
       border-radius: 0.25rem;
     }
+
+    @media (max-width: 768px) {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__button {
@@ -49,10 +54,11 @@
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 
     &:hover {
-      background-color: #ffbf00;
-      color: #16191e;
+      background-color: #a21f24;
+      color: #fff;
     }
   }
 

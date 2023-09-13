@@ -7,6 +7,7 @@
     margin-bottom: 20px;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
   }
 
   &__error-message {
@@ -51,24 +52,21 @@
 
           &__actions {
             text-align: center;
+          }
+        }
+      }
+    }
 
-            &__btn {
-              background-color: #bd262b;
-              color: #fff;
-              border: none;
-              padding: 5px 10px;
-              cursor: pointer;
-              transition: background-color 0.2s ease;
+    .col-md-4 {
+      .product-card__actions {
+        .product-card__btn {
+          background-color: #bd262b;
+          color: #fff;
+          transition: background-color 0.2s ease;
+          margin: 0 10px;
 
-              &:hover {
-                background-color: #0056b3;
-              }
-
-              &--buy {
-                margin-top: 10px;
-                background-color: #3023c7;
-              }
-            }
+          &:hover {
+            background-color: #0056b3;
           }
         }
       }
@@ -76,19 +74,39 @@
 
     .pagination {
       margin-top: 20px;
+    }
+  }
 
-      button {
-        background-color: #3023c7;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
+  .btn-pagination {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    color: #fff;
+    margin: 0 10px;
+    transition: background-color 0.2s ease;
 
-        &:hover {
-          background-color: #595f63;
-        }
+    &:hover {
+      background-color: #a21f24;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    .product-card__actions {
+      .product-card__btn {
+        background-color: #0078d4;
+        margin: 0 1rem;
       }
+    }
+
+    .pagination {
+      margin-top: 10px;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 }

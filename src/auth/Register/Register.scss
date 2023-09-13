@@ -79,7 +79,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #3023c7;
+      background-color: #3023c7 !important;
     }
 
     @media (max-width: 768px) {
