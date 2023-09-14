@@ -172,16 +172,12 @@ const Checkout = () => {
       </Container>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirm Payment</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Are you sure you want to confirm payment?</Modal.Body>
+        <Modal.Title>Checkout Success</Modal.Title>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>Thank you for your purchase!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Cancel
-          </Button>
           <Button variant="primary" onClick={handleConfirmPayment}>
-            Confirm
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
