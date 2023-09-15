@@ -8,6 +8,8 @@ const LoginForm = ({ setIsLoggedIn }) => {
     password: '',
   })
 
+  const [error, setError] = useState('')
+
   const navigate = useNavigate()
 
   const handleInputChange = (e) => {
@@ -17,15 +19,19 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
   const handleLogin = (e) => {
     e.preventDefault()
+    setError('')
+
     const storedUser = JSON.parse(localStorage.getItem(formData.username))
 
-    if (storedUser && storedUser.password === formData.password) {
+    if (!storedUser) {
+      setError('User not found')
+    } else if (storedUser.password !== formData.password) {
+      setError('Incorrect password')
+    } else {
       alert('Successful Login')
       setIsLoggedIn(true)
       localStorage.setItem('currentUser', JSON.stringify(formData.username))
       navigate('/browse')
-    } else {
-      alert('Login failed. Please check your credentials.')
     }
   }
 
@@ -64,6 +70,11 @@ const LoginForm = ({ setIsLoggedIn }) => {
                   required
                 />
               </div>
+              {error && (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              )}
               <div className="form-group text-center">
                 <button
                   type="submit"

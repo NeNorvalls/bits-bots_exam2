@@ -10,6 +10,8 @@ const RegisterForm = () => {
     confirmPassword: '',
   })
 
+  const [error, setError] = useState('')
+
   const navigate = useNavigate()
 
   const handleInputChange = (e) => {
@@ -19,8 +21,10 @@ const RegisterForm = () => {
 
   const handleRegister = (e) => {
     e.preventDefault()
+    setError('')
+
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match. Please try again.')
+      setError('Passwords do not match. Please try again.')
       return
     }
 
@@ -96,6 +100,11 @@ const RegisterForm = () => {
                   required
                 />
               </div>
+              {error && (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              )}
               <div className="form-group text-center">
                 <button
                   type="submit"
