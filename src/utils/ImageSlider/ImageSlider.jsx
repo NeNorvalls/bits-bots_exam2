@@ -18,18 +18,54 @@ function ImageSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
+    {
+      image: image1,
+      alt: 'Life is Strange Game Cover',
+    },
+    {
+      image: image2,
+      alt: 'BioShock Infinite Game Cover',
+    },
+    {
+      image: image3,
+      alt: 'Divinity: Original Sin 2 Game Cover',
+    },
+    {
+      image: image4,
+      alt: 'Grand Theft Auto V Game Cover',
+    },
+    {
+      image: image5,
+      alt: 'Monster Hunter: World Game Cover',
+    },
+    {
+      image: image6,
+      alt: 'The Elder Scrolls V: Skyrim Game Cover',
+    },
+    {
+      image: image7,
+      alt: 'Human Resource Machine Game Cover',
+    },
+    {
+      image: image8,
+      alt: 'Civilization VI Game Cover',
+    },
+    {
+      image: image9,
+      alt: 'Minecraft Game Cover',
+    },
+    {
+      image: image10,
+      alt: 'Limbo Game Cover',
+    },
+    {
+      image: image11,
+      alt: 'Kerbal Space Program Game Cover',
+    },
+    {
+      image: image12,
+      alt: 'Mortal Kombat 11 Game Cover',
+    },
   ]
 
   const nextSlide = () => {
@@ -47,7 +83,7 @@ function ImageSlider() {
   return (
     <div className="slider-container">
       <div className="slider-container__slide">
-        <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
+        <img src={slides[currentSlide].image} alt={slides[currentSlide].alt} />
       </div>
       <div className="slider-container__button-container">
         <button className="slider-container__prev-button" onClick={prevSlide}>
