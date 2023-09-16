@@ -16,5 +16,12 @@
     font-size: 1rem;
     background-color: #bd262b;
     color: #fff;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logout__title {
+    font-size: 14px;
   }
 }

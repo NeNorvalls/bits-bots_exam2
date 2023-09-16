@@ -91,11 +91,20 @@
 }
 
 @media (max-width: 768px) {
+  .browse-page {
+    padding: 0;
+  }
+
+  .browse-page .container .row .col-md-4 .product-card {
+    padding: 0;
+  }
+
   .col-md-4 {
     .product-card__actions {
       .product-card__btn {
         background-color: #0078d4;
         margin: 0 1rem;
+        font-size: 14px;
       }
     }
 
@@ -108,5 +117,13 @@
       display: table;
       clear: both;
     }
+  }
+
+  .browse-page .btn-pagination {
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: background-color 0.2s ease;
   }
 }

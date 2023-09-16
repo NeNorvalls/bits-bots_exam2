@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,11 +8,25 @@ import { useCart } from '../../utils/CartContext/cartContext'
 const Header = ({ isLoggedIn }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   const { cartQuantity } = useCart()
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  })
 
   return (
     <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>

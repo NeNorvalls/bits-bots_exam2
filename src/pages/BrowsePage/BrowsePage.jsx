@@ -197,7 +197,7 @@ const BrowsePage = () => {
             )}
             <div className="modal-button-container">
               <button className="btn btn-secondary mt-3" onClick={closeModal}>
-                Close Modal
+                Close
               </button>
             </div>
           </Modal>

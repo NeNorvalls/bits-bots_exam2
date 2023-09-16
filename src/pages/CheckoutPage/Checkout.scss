@@ -40,8 +40,8 @@
     }
 
     @media (max-width: 768px) {
-      margin-top: 4rem;
-      margin-bottom: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -64,11 +64,19 @@
 
   @media (max-width: 768px) {
     padding: 0.5rem;
+    border: none;
     &__field {
-      margin-bottom: 0.75rem;
+      margin-bottom: 20px;
     }
     &__button {
       margin-top: 1rem;
+      font-size: 16px;
+    }
+    &__items {
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 18px;
     }
   }
 }

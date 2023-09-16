@@ -7,27 +7,6 @@ import { useCart } from '../../utils/CartContext/cartContext'
 const Checkout = () => {
   const { cartItems, clearCart } = useCart()
   const [showModal, setShowModal] = useState(false)
-
-  const navigate = useNavigate()
-
-  const onSubmit = (e) => {
-    e.preventDefault()
-    if (validateData()) {
-      setShowModal(true)
-    }
-  }
-
-  const validateData = () => {
-    return true
-  }
-
-  const handleConfirmPayment = () => {
-    clearCart()
-    localStorage.clear()
-    setShowModal(false)
-    navigate('/browse')
-  }
-
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -38,6 +17,66 @@ const Checkout = () => {
     cvv: '',
   })
 
+  const [errors, setErrors] = useState({})
+
+  const navigate = useNavigate()
+
+  const validateData = () => {
+    console.log('Data validated')
+    let formErrors = {}
+
+    // Validate Name
+    if (!formData.fullName) {
+      formErrors.fullName = 'Name is required'
+    }
+
+    // Validate Email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
+    if (!formData.email) {
+      formErrors.email = 'Email is required'
+    } else if (!emailPattern.test(String(formData.email).toLowerCase())) {
+      formErrors.email = 'Invalid email format'
+    }
+
+    // Validate Card Name
+    if (!formData.cardName) {
+      formErrors.cardName = 'Name on card is required'
+    }
+
+    // Validate Card Number
+    const creditCardPattern = /^[0-9]{16}$/
+    if (!formData.cardNumber) {
+      formErrors.cardNumber = 'Card number is required'
+    } else if (!creditCardPattern.test(String(formData.cardNumber))) {
+      formErrors.cardNumber = 'Invalid card number'
+    }
+
+    // Validate Expiration Month
+    if (!formData.expMonth) {
+      formErrors.expMonth = 'Expiration month is required'
+    }
+
+    // Validate Expiration Year
+    if (!formData.expYear) {
+      formErrors.expYear = 'Expiration year is required'
+    }
+
+    // Validate CVV
+    if (!formData.cvv) {
+      formErrors.cvv = 'CVV is required'
+    }
+
+    setErrors(formErrors)
+    return Object.keys(formErrors).length === 0
+  }
+
+  const handleConfirmPayment = () => {
+    clearCart()
+    localStorage.clear()
+    setShowModal(false)
+    navigate('/browse')
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData({
@@ -46,12 +85,21 @@ const Checkout = () => {
     })
   }
 
+  const handleSubmit = (e) => {
+    console.log('Form Submitted!')
+    e.preventDefault()
+    if (validateData()) {
+      console.log('Form is valid. Data:', formData)
+      setShowModal(true)
+    }
+  }
+
   return (
     <div className="checkout">
       <h1>Checkout</h1>
       <div className="checkout__items">{cartItems.length} Items in Cart</div>
       <Container className="checkout__container">
-        <form className="checkout__form" onSubmit={onSubmit}>
+        <form className="checkout__form" onSubmit={handleSubmit}>
           <Row>
             <Col md={6} className="checkout__section">
               <h2 className="checkout__title">Billing Information</h2>
@@ -67,8 +115,10 @@ const Checkout = () => {
                   placeholder="John M. Doe"
                   value={formData.fullName}
                   onChange={handleChange}
-                  required
                 />
+                {errors.fullName && (
+                  <div className="error">{errors.fullName}</div>
+                )}
               </div>
               <div className="checkout__field">
                 <label className="checkout__label" htmlFor="email">
@@ -82,8 +132,8 @@ const Checkout = () => {
                   placeholder="john@example.com"
                   value={formData.email}
                   onChange={handleChange}
-                  required
                 />
+                {errors.email && <div className="error">{errors.email}</div>}
               </div>
             </Col>
             <Col md={6} className="checkout__section">
@@ -100,8 +150,10 @@ const Checkout = () => {
                   placeholder="John More Doe"
                   value={formData.cardName}
                   onChange={handleChange}
-                  required
                 />
+                {errors.cardName && (
+                  <div className="error">{errors.cardName}</div>
+                )}
               </div>
               <div className="checkout__field">
                 <label className="checkout__label" htmlFor="cardNumber">
@@ -115,8 +167,10 @@ const Checkout = () => {
                   placeholder="1111-2222-3333-4444"
                   value={formData.cardNumber}
                   onChange={handleChange}
-                  required
                 />
+                {errors.cardNumber && (
+                  <div className="error">{errors.cardNumber}</div>
+                )}
               </div>
               <div className="checkout__field">
                 <label className="checkout__label" htmlFor="expMonth">
@@ -130,8 +184,10 @@ const Checkout = () => {
                   placeholder="September"
                   value={formData.expMonth}
                   onChange={handleChange}
-                  required
                 />
+                {errors.expMonth && (
+                  <div className="error">{errors.expMonth}</div>
+                )}
               </div>
               <div className="checkout__field">
                 <label className="checkout__label" htmlFor="expYear">
@@ -145,8 +201,10 @@ const Checkout = () => {
                   placeholder="2018"
                   value={formData.expYear}
                   onChange={handleChange}
-                  required
                 />
+                {errors.expYear && (
+                  <div className="error">{errors.expYear}</div>
+                )}
               </div>
               <div className="checkout__field">
                 <label className="checkout__label" htmlFor="cvv">
@@ -160,8 +218,8 @@ const Checkout = () => {
                   placeholder="352"
                   value={formData.cvv}
                   onChange={handleChange}
-                  required
                 />
+                {errors.cvv && <div className="error">{errors.cvv}</div>}
               </div>
             </Col>
           </Row>

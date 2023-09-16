@@ -6,13 +6,8 @@
   bottom: 0;
   width: 100%;
 
-  @media (max-width: 768px) {
-    padding: 10px;
-  }
-
   &__container {
     background-color: #16191e;
-    border-radius: 5px;
     padding: 20px;
 
     @media (max-width: 768px) {

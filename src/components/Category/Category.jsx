@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Category.scss' // Import the SCSS file
+import './Category.scss'
 
 const Category = ({ onSelectCategory }) => {
   const [selectedCategory, setSelectedCategory] = useState('All')

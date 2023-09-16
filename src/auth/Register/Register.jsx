@@ -10,7 +10,7 @@ const RegisterForm = () => {
     confirmPassword: '',
   })
 
-  const [error, setError] = useState('')
+  const [errors, setErrors] = useState({})
 
   const navigate = useNavigate()
 
@@ -21,16 +21,45 @@ const RegisterForm = () => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    setError('')
+    if (validateData()) {
+      localStorage.setItem(formData.email, JSON.stringify(formData))
+      alert('Registration successful. You can now log in.')
+      navigate('/login')
+    }
+  }
 
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match. Please try again.')
-      return
+  const validateData = () => {
+    let formErrors = {}
+
+    // Validate Name
+    if (!formData.name) {
+      formErrors.name = 'Name is required'
     }
 
-    localStorage.setItem(formData.email, JSON.stringify(formData))
-    alert('Registration successful. You can now log in.')
-    navigate('/login')
+    // Validate Email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
+    if (!formData.email) {
+      formErrors.email = 'Email is required'
+    } else if (!emailPattern.test(String(formData.email).toLowerCase())) {
+      formErrors.email = 'Invalid email format'
+    }
+
+    // Validate Password
+    const passwordRegEx = /^(?=.*[A-Z]).{8,}$/
+    if (!formData.password) {
+      formErrors.password = 'Password is required'
+    } else if (!passwordRegEx.test(String(formData.password))) {
+      formErrors.password =
+        'Password must be at least 8 characters long and contain at least one uppercase letter.'
+    }
+
+    // Validate Confirm Password
+    if (formData.password !== formData.confirmPassword) {
+      formErrors.confirmPassword = 'Passwords do not match'
+    }
+
+    setErrors(formErrors)
+    return Object.keys(formErrors).length === 0
   }
 
   return (
@@ -51,8 +80,8 @@ const RegisterForm = () => {
                   className="form-control register-form__input"
                   value={formData.name}
                   onChange={handleInputChange}
-                  required
                 />
+                {errors.name && <div className="error">{errors.name}</div>}
               </div>
               <div className="form-group">
                 <label htmlFor="email" className="register-form__label">
@@ -65,9 +94,9 @@ const RegisterForm = () => {
                   className="form-control register-form__input"
                   value={formData.email}
                   onChange={handleInputChange}
-                  required
                   autoComplete="username"
                 />
+                {errors.email && <div className="error">{errors.email}</div>}
               </div>
               <div className="form-group">
                 <label htmlFor="password" className="register-form__label">
@@ -80,8 +109,10 @@ const RegisterForm = () => {
                   className="form-control register-form__input"
                   value={formData.password}
                   onChange={handleInputChange}
-                  required
                 />
+                {errors.password && (
+                  <div className="error">{errors.password}</div>
+                )}
               </div>
               <div className="form-group">
                 <label
@@ -97,12 +128,16 @@ const RegisterForm = () => {
                   className="form-control register-form__input"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  required
                 />
+                {errors.confirmPassword && (
+                  <div className="error">{errors.confirmPassword}</div>
+                )}
               </div>
-              {error && (
+              {Object.keys(errors).length > 0 && (
                 <div className="alert alert-danger" role="alert">
-                  {error}
+                  {Object.values(errors).map((error, index) => (
+                    <div key={index}>{error}</div>
+                  ))}
                 </div>
               )}
               <div className="form-group text-center">

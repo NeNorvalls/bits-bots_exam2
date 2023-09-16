@@ -44,10 +44,13 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+  padding-top: 8rem;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-y: auto;
+  max-height: 100vh;
 
   &__content {
     background-color: #fff;
@@ -56,6 +59,8 @@
     width: 80%;
     max-width: 800px;
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 
     &__button-container {
       text-align: left;
@@ -78,7 +83,22 @@
   }
 }
 
+.modal-button-container {
+  padding: 10px;
+}
+
 img {
   height: auto;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .search-results {
+    display: block;
+  }
+
+  .search-results__title {
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
