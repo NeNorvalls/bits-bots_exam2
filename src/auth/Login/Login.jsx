@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const LoginForm = ({ setIsLoggedIn }) => {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: '',
   })
 
@@ -21,7 +21,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
     e.preventDefault()
     setError('')
 
-    const storedUser = JSON.parse(localStorage.getItem(formData.username))
+    const storedUser = JSON.parse(localStorage.getItem(formData.email))
 
     if (!storedUser) {
       setError('User not found')
@@ -30,28 +30,26 @@ const LoginForm = ({ setIsLoggedIn }) => {
     } else {
       alert('Successful Login')
       setIsLoggedIn(true)
-      localStorage.setItem('currentUser', JSON.stringify(formData.username))
+      localStorage.setItem('currentUser', JSON.stringify(formData.email))
       navigate('/browse')
     }
   }
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
+      <>
           <div className="login-form">
             <h1 className="login-form__title">Login</h1>
             <form onSubmit={handleLogin}>
               <div className="form-group">
                 <label htmlFor="username" className="login-form__label">
-                  Username:
+                  Email:
                 </label>
                 <input
                   type="text"
-                  id="username"
-                  name="username"
+                  id="email"
+                  name="email"
                   className="form-control login-form__input"
-                  value={formData.username}
+                  value={formData.email}
                   onChange={handleInputChange}
                   required
                 />
@@ -88,9 +86,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
               </div>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
+      </>
   )
 }
 

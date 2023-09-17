@@ -63,9 +63,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
+      <>
           <div className="register-form">
             <h1 className="register-form__title">Register</h1>
             <form onSubmit={handleRegister}>
@@ -150,9 +148,7 @@ const RegisterForm = () => {
               </div>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
+      </>
   )
 }
 

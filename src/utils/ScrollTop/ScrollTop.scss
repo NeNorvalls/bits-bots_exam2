@@ -1,13 +1,13 @@
 :root {
   --primary-color: #3023c7;
   --secondary-color: #1d157a;
-  --border-color: #fff;
+  --border: 2px solid white;
   --button-size: 40px;
   --button-size-mobile: 30px;
   --button-right: 20px;
   --button-bottom: 20px;
   --button-font-size: 24px;
-  --button-font-size-mobile: 20px;
+  --button-font-size-mobile: 16px;
 }
 
 .scroll-to-top-button {
@@ -16,7 +16,7 @@
   right: var(--button-right);
   background-color: var(--primary-color);
   color: #fff;
-  border: 3px solid var(--border-color);
+  border: var(--border);
   border-radius: 50%;
   width: var(--button-size);
   height: var(--button-size);

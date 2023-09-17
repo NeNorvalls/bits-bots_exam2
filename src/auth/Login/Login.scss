@@ -21,10 +21,15 @@
   --login-form-register-link-margin-top: 20px;
 }
 
+.form__row {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .login-form {
   background-color: var(--login-form-bg-color);
   margin: 0 auto;
-  width: var(--login-form-width);
   padding: var(--login-form-padding);
   border-radius: var(--login-form-border-radius);
   box-shadow: var(--login-form-box-shadow);
@@ -110,6 +115,10 @@
     @media (max-width: 768px) {
       font-size: var(--login-form-font-size-register-link-mobile);
     }
+  }
+
+  @media (min-width: 769px) {
+    max-width: 350px;
   }
 
   @media (max-width: 768px) {

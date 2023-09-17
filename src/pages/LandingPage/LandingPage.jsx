@@ -16,7 +16,7 @@ const LandingPage = ({ setIsLoggedIn }) => {
       </div>
 
       <div className="container">
-        <div className="row">
+        <div className="row slider-row">
           <div className="col-md-12 landing-page__features-container">
             <ImageSlider />
           </div>
@@ -24,13 +24,13 @@ const LandingPage = ({ setIsLoggedIn }) => {
       </div>
 
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row" id='form-row'>
+          <div className="column">
             <div className="landing-page__login-form">
               <LoginForm setIsLoggedIn={setIsLoggedIn} />
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="column">
             <div className="landing-page__register-form">
               <RegisterForm />
             </div>

@@ -95,8 +95,20 @@
   }
 }
 
+.btn-primary {
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
 .modal-button-container {
   padding: 10px;
+
+  .btn-secondary {
+    background-color: #ad0000;
+  }
 }
 
 img {

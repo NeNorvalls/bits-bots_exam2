@@ -6,7 +6,7 @@
   --header-font-size: 36px;
   --header-font-weight: bold;
   --header-text-color: #fff;
-  --header-text-decoration: none;
+  --header-text-decoration: block;
   --header-hover-color: #ffbf00;
   --header-menu-toggle-display: none;
   --header-menu-toggle-background: transparent;
@@ -64,7 +64,6 @@
   }
 
   &__menu-toggle {
-    display: var(--header-menu-toggle-display);
     background: var(--header-menu-toggle-background);
     border: var(--header-menu-toggle-border);
     cursor: var(--header-menu-toggle-cursor);
@@ -106,18 +105,8 @@
     }
   }
 
-  &.menu-open {
-    .header__menu-toggle {
-      display: var(--header-menu-open-display);
-    }
-  }
-
   @media (max-width: 767px) {
     padding: var(--header-padding-y);
-
-    .header__menu-toggle {
-      display: var(--header-menu-toggle-display);
-    }
 
     .header__brand {
       font-size: var(--header-brand-font-size);

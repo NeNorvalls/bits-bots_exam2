@@ -8,7 +8,7 @@
   --browse-page-title-margin-top: 2rem;
   --browse-page-error-message-color: red;
   --product-card-bg-color: #fff;
-  --product-card-border: 1px solid #fff;
+  --product-card-border: 1px solid #16191e;
   --product-card-padding: 15px;
   --product-card-hover-transform: translateY(-5px);
   --product-card-image-body-padding: 10px;
@@ -53,6 +53,7 @@
           background-color: var(--product-card-bg-color);
           border: var(--product-card-border);
           padding: var(--product-card-padding);
+          margin: 20px 0;
           transition: transform 0.2s ease;
 
           &:hover {

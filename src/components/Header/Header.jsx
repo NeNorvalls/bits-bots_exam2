@@ -31,15 +31,24 @@ const Header = ({ isLoggedIn }) => {
   return (
     <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header__left">
-        <Link to="/">
-          <h1 className="header__brand">Bits & Bots</h1>
-        </Link>
+        {isLoggedIn ? (
+          <Link to="/browse">
+            <h1 className="header__brand">Bits & Bots</h1>
+          </Link>
+        ) : (
+          <Link to="/">
+            <h1 className="header__brand">Bits & Bots</h1>
+          </Link>
+        )}
+        
       </div>
-      <button className="header__menu-toggle" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </button>
+      {isLoggedIn ? (
+        <button className="header__menu-toggle" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </button>
+      ) : null}
       <nav className="header__nav">
         {isLoggedIn ? (
           <>

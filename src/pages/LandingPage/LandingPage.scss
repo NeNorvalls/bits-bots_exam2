@@ -20,6 +20,24 @@
   --landing-page-mobile-header-title-size: 20px;
 }
 
+.row {
+  justify-content: center;
+}
+
+#form-row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  width: calc(50% - 40px);
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+}
+
 .landing-page {
   &__header {
     text-align: center;

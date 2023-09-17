@@ -22,7 +22,6 @@ const Checkout = () => {
   const navigate = useNavigate()
 
   const validateData = () => {
-    console.log('Data validated')
     let formErrors = {}
 
     // Validate Name
@@ -86,10 +85,8 @@ const Checkout = () => {
   }
 
   const handleSubmit = (e) => {
-    console.log('Form Submitted!')
     e.preventDefault()
     if (validateData()) {
-      console.log('Form is valid. Data:', formData)
       setShowModal(true)
     }
   }

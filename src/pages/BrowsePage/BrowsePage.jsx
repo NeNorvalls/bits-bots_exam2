@@ -37,7 +37,6 @@ const BrowsePage = () => {
         }
 
         const contentType = response.headers.get('Content-Type')
-        console.log(`Content-Type: ${contentType}`)
 
         if (contentType && contentType.includes('application/json')) {
           const data = await response.json()
@@ -45,7 +44,6 @@ const BrowsePage = () => {
           setError(null)
 
           setIsLoading(false)
-          console.log(data)
         } else {
           throw new Error('Unsupported content type')
         }
