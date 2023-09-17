@@ -1,3 +1,12 @@
+:root {
+  --logout-font-size-title: 1.5rem;
+  --logout-margin-bottom-title: 2rem;
+  --logout-font-size-button: 1rem;
+  --logout-padding-button: 0.5rem 1rem;
+  --logout-button-bg-color: #ad0000;
+  --logout-button-text-color: #fff;
+}
+
 .logout {
   display: flex;
   flex-direction: column;
@@ -6,16 +15,16 @@
   height: 100vh;
 
   &__title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: var(--logout-font-size-title);
+    margin-bottom: var(--logout-margin-bottom-title);
   }
 
   &__button {
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #ad0000;
-    color: #fff;
+    padding: var(--logout-padding-button);
+    font-size: var(--logout-font-size-button);
+    background-color: var(--logout-button-bg-color);
+    color: var(--logout-button-text-color);
     border: none;
   }
 }

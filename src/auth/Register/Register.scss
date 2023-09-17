@@ -1,33 +1,53 @@
+:root {
+  --form-bg-color: #fff;
+  --form-width: 350px;
+  --form-padding: 20px;
+  --form-border-radius: 10px;
+  --form-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  --form-font-size-title: 24px;
+  --form-font-size-title-mobile: 20px;
+  --form-margin-bottom-title: 20px;
+  --form-font-size-label: 18px;
+  --form-margin-bottom-label: 5px;
+  --form-font-size-input: 16px;
+  --form-font-size-input-mobile: 14px;
+  --form-border-color-focus: #3023c7;
+  --form-font-size-submit-btn: 18px;
+  --form-font-size-submit-btn-mobile: 16px;
+  --form-submit-btn-bg-color: #3023c7;
+  --form-submit-btn-hover-bg-color: #1d157a;
+}
+
 .register-form {
-  background-color: #fff;
-  width: 350px;
+  background-color: var(--form-bg-color);
+  width: var(--form-width);
   margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: var(--form-padding);
+  border-radius: var(--form-border-radius);
+  box-shadow: var(--form-box-shadow);
   margin-bottom: 8rem;
   margin-top: 1rem;
 
   &__title {
-    font-size: 24px;
+    font-size: var(--form-font-size-title);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--form-margin-bottom-title);
     color: #16191e;
 
     @media (max-width: 768px) {
-      font-size: 20px;
+      font-size: var(--form-font-size-title-mobile);
     }
   }
 
   &__group {
-    margin-bottom: 20px;
+    margin-bottom: var(--form-margin-bottom-label);
 
     &:last-child {
       margin-bottom: 0;
     }
 
     @media (max-width: 768px) {
-      margin-bottom: 10px;
+      margin-bottom: var(--form-margin-bottom-label);
 
       &:last-child {
         margin-bottom: 0;
@@ -36,25 +56,25 @@
   }
 
   &__label {
-    font-size: 18px;
+    font-size: var(--form-font-size-label);
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: var(--form-margin-bottom-label);
     color: #16191e;
   }
 
   &__input {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: var(--form-font-size-input);
     border-radius: 4px;
     color: #16191e;
 
     &:focus {
-      border-color: #3023c7;
+      border-color: var(--form-border-color-focus);
     }
 
     @media (max-width: 768px) {
-      font-size: 14px;
+      font-size: var(--form-font-size-input-mobile);
     }
 
     @media (max-width: 480px) {
@@ -67,9 +87,9 @@
   }
 
   &__submit-btn {
-    font-size: 18px;
+    font-size: var(--form-font-size-submit-btn);
     padding: 10px 20px;
-    background-color: #3023c7;
+    background-color: var(--form-submit-btn-bg-color);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -78,11 +98,11 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #1d157a;
+      background-color: var(--form-submit-btn-hover-bg-color);
     }
 
     @media (max-width: 768px) {
-      font-size: 16px;
+      font-size: var(--form-font-size-submit-btn-mobile);
     }
 
     @media (max-width: 480px) {

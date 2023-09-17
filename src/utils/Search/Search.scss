@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #3023c7;
+  --secondary-color: #1d157a;
+  --border-color: #16191e;
+  --background-color: #fff;
+  --text-color: #000;
+  --hover-color: #ad0000;
+}
+
 .search-label {
   font-weight: bold;
 }
@@ -6,7 +15,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #16191e;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
 }
 
@@ -14,32 +23,35 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
 
-  &__item {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #16191e;
-    border-radius: 4px;
-    flex-basis: calc(33.33% - 10px);
-    transition: background-color 0.3s ease;
+.search-results__item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  flex-basis: calc(33.33% - 10px);
+  transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: #ad0000;
-    }
-
-    &__title {
-      margin: 0;
-    }
+  &:hover {
+    background-color: var(--hover-color);
+    color: #fff;
   }
 
-  &__message {
-    margin-top: 10px;
-    font-style: italic;
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
   }
 }
 
+.search-results__message {
+  margin-top: 10px;
+  font-style: italic;
+}
+
 .modal-overlay {
-  background-color: #fff;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +65,7 @@
   max-height: 100vh;
 
   &__content {
-    background-color: #fff;
+    background-color: var(--background-color);
     border-radius: 4px;
     padding: 20px;
     width: 80%;
@@ -67,7 +79,7 @@
       margin-top: 20px;
 
       &__button {
-        background-color: #3023c7;
+        background-color: var(--primary-color);
         color: white;
         border: none;
         padding: 10px 20px;
@@ -76,7 +88,7 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #1d157a;
+          background-color: var(--secondary-color);
         }
       }
     }
@@ -95,10 +107,5 @@ img {
 @media (max-width: 768px) {
   .search-results {
     display: block;
-  }
-
-  .search-results__title {
-    font-weight: bold;
-    font-size: 14px;
   }
 }

@@ -1,9 +1,11 @@
+/* Block: .loader */
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 
+  /* Element: .loader__spinner */
   &__spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     width: 36px;

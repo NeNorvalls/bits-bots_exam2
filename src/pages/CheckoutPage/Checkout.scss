@@ -1,29 +1,47 @@
+:root {
+  --checkout-max-width: 600px;
+  --checkout-padding: 1rem;
+  --checkout-border: 1px solid #fff;
+  --checkout-border-radius: 0.25rem;
+  --checkout-margin-top: 2rem;
+  --checkout-margin-bottom: 10rem;
+  --checkout-font-size: 1.2rem;
+  --checkout-title-font-size: 1.5rem;
+  --checkout-field-margin: 1rem;
+  --checkout-input-padding: 0.5rem;
+  --checkout-input-font-size: 1rem;
+  --checkout-button-padding: 0.75rem 1rem;
+  --checkout-button-font-size: 1.2rem;
+  --checkout-button-bg-color: #ad0000;
+  --checkout-button-hover-bg-color: #750000;
+}
+
 .checkout {
   width: 100%;
-  max-width: 600px;
+  max-width: var(--checkout-max-width);
   margin: 0 auto;
-  padding: 1rem;
-  border: 1px solid #fff;
-  border-radius: 0.25rem;
-  margin-top: 2rem;
-  margin-bottom: 10rem;
+  padding: var(--checkout-padding);
+  border: var(--checkout-border);
+  border-radius: var(--checkout-border-radius);
+  margin-top: var(--checkout-margin-top);
+  margin-bottom: var(--checkout-margin-bottom);
 
   &__items {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: var(--checkout-font-size);
+    margin-bottom: var(--checkout-field-margin);
   }
 
   &__section {
-    margin-bottom: 2rem;
+    margin-bottom: var(--checkout-field-margin);
   }
 
   &__title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: var(--checkout-title-font-size);
+    margin-bottom: var(--checkout-field-margin);
   }
 
   &__field {
-    margin-bottom: 1rem;
+    margin-bottom: var(--checkout-field-margin);
 
     & label {
       display: block;
@@ -33,43 +51,43 @@
 
     & input {
       width: 100%;
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: 1px solid #fff;
-      border-radius: 0.25rem;
+      padding: var(--checkout-input-padding);
+      font-size: var(--checkout-input-font-size);
+      border: var(--checkout-border);
+      border-radius: var(--checkout-border-radius);
     }
 
     @media (max-width: 768px) {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      margin-top: var(--checkout-field-margin);
+      margin-bottom: var(--checkout-field-margin);
     }
   }
 
   &__button {
     display: block;
-    padding: 0.75rem 1rem;
-    font-size: 1.2rem;
-    background-color: #ad0000;
+    padding: var(--checkout-button-padding);
+    font-size: var(--checkout-button-font-size);
+    background-color: var(--checkout-button-bg-color);
     color: #fff;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: var(--checkout-border-radius);
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 
     &:hover {
-      background-color: #750000;
+      background-color: var(--checkout-button-hover-bg-color);
       color: #fff;
     }
   }
 
   @media (max-width: 768px) {
-    padding: 0.5rem;
+    padding: var(--checkout-padding);
     border: none;
     &__field {
       margin-bottom: 20px;
     }
     &__button {
-      margin-top: 1rem;
+      margin-top: var(--checkout-field-margin);
       font-size: 16px;
     }
     &__items {
@@ -82,22 +100,22 @@
 }
 
 .modal {
-  max-width: 600px;
+  max-width: var(--checkout-max-width);
   margin: 0 auto;
 
   &-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: var(--checkout-title-font-size);
+    margin-bottom: var(--checkout-field-margin);
   }
 
   &-body {
-    font-size: 1.2rem;
+    font-size: var(--checkout-font-size);
   }
 
   &-footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: var(--checkout-field-margin);
   }
 }
 

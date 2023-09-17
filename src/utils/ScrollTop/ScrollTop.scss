@@ -1,15 +1,27 @@
+:root {
+  --primary-color: #3023c7;
+  --secondary-color: #1d157a;
+  --border-color: #fff;
+  --button-size: 40px;
+  --button-size-mobile: 30px;
+  --button-right: 20px;
+  --button-bottom: 20px;
+  --button-font-size: 24px;
+  --button-font-size-mobile: 20px;
+}
+
 .scroll-to-top-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #3023c7;
+  bottom: var(--button-bottom);
+  right: var(--button-right);
+  background-color: var(--primary-color);
   color: #fff;
-  border: 3px solid #fff;
+  border: 3px solid var(--border-color);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: var(--button-size);
+  height: var(--button-size);
   padding: 0;
-  font-size: 24px;
+  font-size: var(--button-font-size);
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 9999;
@@ -19,14 +31,14 @@
   }
 
   &:hover {
-    background-color: #1d157a;
+    background-color: var(--secondary-color);
   }
 
   @media screen and (max-width: 768px) {
-    width: 30px;
-    height: 30px;
+    width: var(--button-size-mobile);
+    height: var(--button-size-mobile);
     right: 10px;
     bottom: 10px;
-    font-size: 20px;
+    font-size: var(--button-font-size-mobile);
   }
 }

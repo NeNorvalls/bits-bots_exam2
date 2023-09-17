@@ -1,6 +1,11 @@
+:root {
+  --product-details-custom-margin: 20px;
+  --product-details-custom-font-size: 1.5rem;
+}
+
 .product-details-custom {
   &__col {
-    margin-bottom: 20px;
+    margin-bottom: var(--product-details-custom-margin);
   }
 
   &__image {
@@ -9,7 +14,7 @@
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: var(--product-details-custom-font-size);
     margin-top: 0;
   }
 

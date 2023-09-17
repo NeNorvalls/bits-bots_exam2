@@ -35,30 +35,14 @@
   align-items: center;
   margin-top: 10px;
 
-  .slider-container__prev-button {
-    background-color: #ad0000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 8px 16px;
-    font-size: 18px;
-    border-radius: 5px;
-    order: 1;
-
-    &:hover {
-      background-color: #750000;
-    }
-  }
-
+  .slider-container__prev-button,
   .slider-container__next-button {
     background-color: #ad0000;
     color: #fff;
     border: none;
     cursor: pointer;
-    padding: 8px 16px;
     font-size: 18px;
     border-radius: 5px;
-    order: 2;
 
     &:hover {
       background-color: #750000;
@@ -71,5 +55,13 @@
       padding: 6px 12px;
       font-size: 16px;
     }
+  }
+
+  .slider-container__prev-button {
+    order: 1;
+  }
+
+  .slider-container__next-button {
+    order: 2;
   }
 }

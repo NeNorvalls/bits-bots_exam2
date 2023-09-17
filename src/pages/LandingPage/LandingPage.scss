@@ -1,10 +1,32 @@
+:root {
+  --landing-page-margin: 20px;
+  --landing-page-padding: 1rem;
+  --landing-page-max-width: 1400px;
+  --landing-page-max-height: 60vh;
+  --landing-page-mobile-padding: 0.5rem;
+  --landing-page-mobile-max-height: 40vh;
+  --landing-page-smallest-padding: 0.25rem;
+  --landing-page-smallest-max-height: 30vh;
+  --landing-page-bg-color: #fff;
+  --landing-page-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  --landing-page-button-bg: #3023c7;
+  --landing-page-button-hover-bg: #1d157a;
+  --landing-page-button-font-size: 16px;
+  --landing-page-form-max-width: 400px;
+  --landing-page-form-button-padding: 10px 20px;
+  --landing-page-form-input: 16px;
+  --landing-page-form-label-weight: bold;
+  --landing-page-header-title-size: 24px;
+  --landing-page-mobile-header-title-size: 20px;
+}
+
 .landing-page {
   &__header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--landing-page-margin);
 
     &-title {
-      font-size: 24px;
+      font-size: var(--landing-page-header-title-size);
       font-weight: bold;
       color: #000000;
       padding-top: 1rem;
@@ -13,32 +35,32 @@
 
   &__features-container {
     max-width: 100%;
-    padding: 1rem;
-    margin: 1rem;
+    padding: var(--landing-page-padding);
+    margin: var(--landing-page-margin);
 
     img {
-      max-width: 1400px;
+      max-width: var(--landing-page-max-width);
       display: block;
       margin: 0 auto;
       height: auto;
-      max-height: 60vh;
+      max-height: var(--landing-page-max-height);
     }
 
     @media (max-width: 768px) {
-      padding: 0.5rem;
-      margin: 0.5rem;
+      padding: var(--landing-page-mobile-padding);
+      margin: var(--landing-page-mobile-padding);
 
       img {
-        max-height: 40vh;
+        max-height: var(--landing-page-mobile-max-height);
       }
     }
 
     @media (max-width: 480px) {
-      padding: 0.25rem;
-      margin: 0.25rem;
+      padding: var(--landing-page-smallest-padding);
+      margin: var(--landing-page-smallest-padding);
 
       img {
-        max-height: 30vh;
+        max-height: var(--landing-page-smallest-max-height);
       }
     }
   }
@@ -46,13 +68,13 @@
   &__login-form,
   &__register-form {
     .form {
-      background-color: #fff;
-      padding: 20px;
+      background-color: var(--landing-page-bg-color);
+      padding: var(--landing-page-padding);
       border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--landing-page-shadow);
 
       label {
-        font-weight: bold;
+        font-weight: var(--landing-page-form-label-weight);
       }
 
       input[type="text"],
@@ -62,25 +84,25 @@
         margin-bottom: 15px;
         border: 1px solid #fff;
         border-radius: 3px;
-        font-size: 16px;
+        font-size: var(--landing-page-form-input);
       }
 
       button {
-        background-color: #3023c7;
+        background-color: var(--landing-page-button-bg);
         color: #fff;
         border: none;
-        padding: 10px 20px;
+        padding: var(--landing-page-form-button-padding);
         border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: var(--landing-page-button-font-size);
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #1d157a;
+          background-color: var(--landing-page-button-hover-bg);
         }
 
         @media (min-width: 768px) {
-          max-width: 400px;
+          max-width: var(--landing-page-form-max-width);
           margin: 0 auto;
         }
       }
@@ -90,7 +112,7 @@
   @media (max-width: 768px) {
     &__header {
       &-title {
-        font-size: 24px;
+        font-size: var(--landing-page-mobile-header-title-size);
       }
     }
 
@@ -104,7 +126,7 @@
     &__login-form,
     &__register-form {
       .form {
-        margin-top: 20px;
+        margin-top: var(--landing-page-margin);
       }
     }
   }
@@ -112,7 +134,7 @@
   @media (max-width: 576px) {
     &__header {
       &-title {
-        font-size: 20px;
+        font-size: var(--landing-page-mobile-header-title-size);
       }
     }
 
