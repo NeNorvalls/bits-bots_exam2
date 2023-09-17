@@ -13,7 +13,7 @@
   position: relative;
   max-width: 100%;
   height: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
@@ -36,7 +36,7 @@
   margin-top: 10px;
 
   .slider-container__prev-button {
-    background-color: #007bff;
+    background-color: #3023c7;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -46,12 +46,12 @@
     order: 1;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #1d157a;
     }
   }
 
   .slider-container__next-button {
-    background-color: #007bff;
+    background-color: #3023c7;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -61,7 +61,7 @@
     order: 2;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #1d157a;
     }
   }
 

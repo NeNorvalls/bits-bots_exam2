@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: #3023c7;
   color: #fff;
-  border: none;
+  border: 3px solid #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -19,7 +19,7 @@
   }
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #1d157a;
   }
 
   @media screen and (max-width: 768px) {

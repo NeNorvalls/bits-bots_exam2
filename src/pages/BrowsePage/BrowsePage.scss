@@ -21,7 +21,7 @@
       .col-md-4 {
         .product-card {
           background-color: #fff;
-          border: 1px solid #ddd;
+          border: 1px solid #fff;
           padding: 15px;
           transition: transform 0.2s ease;
 
@@ -47,7 +47,7 @@
 
           &__category {
             font-size: 14px;
-            color: #6c757d;
+            color: #16191e;
           }
 
           &__actions {
@@ -60,13 +60,13 @@
     .col-md-4 {
       .product-card__actions {
         .product-card__btn {
-          background-color: #bd262b;
+          background-color: #ad0000;
           color: #fff;
           transition: background-color 0.2s ease;
           margin: 0 10px;
 
           &:hover {
-            background-color: #0056b3;
+            background-color: #750000;
           }
         }
       }
@@ -78,14 +78,14 @@
   }
 
   .btn-pagination {
-    background-color: #0056b3;
+    background-color: #3023c7;
     padding: 10px 20px;
     color: #fff;
     margin: 0 10px;
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: #a21f24;
+      background-color: #1d157a;
     }
   }
 }
