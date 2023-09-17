@@ -36,7 +36,7 @@
   margin-top: 10px;
 
   .slider-container__prev-button {
-    background-color: #3023c7;
+    background-color: #ad0000;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -46,12 +46,12 @@
     order: 1;
 
     &:hover {
-      background-color: #1d157a;
+      background-color: #750000;
     }
   }
 
   .slider-container__next-button {
-    background-color: #3023c7;
+    background-color: #ad0000;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -61,7 +61,7 @@
     order: 2;
 
     &:hover {
-      background-color: #1d157a;
+      background-color: #750000;
     }
   }
 
