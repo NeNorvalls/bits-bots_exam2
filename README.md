@@ -36,15 +36,16 @@
 
 ## REQUIRED FORMAT LINKS
 
-| Resource         | URL                                                                                       |
-| ---------------- | ----------------------------------------------------------------------------------------- |
-| Gantt Chart      | [Gantt Chart URL](<file:///C:/Users/honey/Downloads/Bits%20&amp%3B%20Bots%20(2).pdf>)     |
-| Design Prototype | [Desktop Prototype](https://xd.adobe.com/view/cde56c69-c26d-4fd9-8393-4e180d2bea64-98b6/) |
-| Design Prototype | [Mobile Prototype](https://xd.adobe.com/view/8610cd1a-75a0-48a6-be37-c57c2ca5e323-d343/)  |
-| Style Guide      | [Style Guide](https://xd.adobe.com/view/8072be7c-e4f6-4f8e-86b8-ed5fc2f4b7b2-d521/)       |
-| Kanban Board     | [Project Board Link](https://app.ganttpro.com/#/project/1695031576177/board)              |
-| Repository       | [Github Project Repository](https://github.com/NeNorvalls/bits_and_bots_final_exam2.git)  |
-| Hosted Demo      | [Netlify Link](https://bits-and-bots.netlify.app/)                                        |
+| Resource                 | URL                                                                                       |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| Functional Specification | [Project Brief](file:///C:/Users/honey/Downloads/ProjectExam2_Resit.pdf)                  |
+| Gantt Chart              | [Gantt Chart URL](<file:///C:/Users/honey/Downloads/Bits%20&amp%3B%20Bots%20(2).pdf>)     |
+| Design Prototype         | [Desktop Prototype](https://xd.adobe.com/view/cde56c69-c26d-4fd9-8393-4e180d2bea64-98b6/) |
+| Design Prototype         | [Mobile Prototype](https://xd.adobe.com/view/8610cd1a-75a0-48a6-be37-c57c2ca5e323-d343/)  |
+| Style Guide              | [Style Guide](https://xd.adobe.com/view/8072be7c-e4f6-4f8e-86b8-ed5fc2f4b7b2-d521/)       |
+| Kanban Board             | [Project Board Link](https://app.ganttpro.com/#/project/1695031576177/board)              |
+| Repository               | [Github Project Repository](https://github.com/NeNorvalls/bits_and_bots_final_exam2.git)  |
+| Hosted Demo              | [Netlify Link](https://bits-and-bots.netlify.app/)                                        |
 
 ## Breakdown of what is happening per page
 
