@@ -10,7 +10,6 @@ export const CartProvider = ({ children, initialCart }) => {
     return savedCartItems ? JSON.parse(savedCartItems) : initialCart || [];
   });
 
-  // Save cart items to local storag when they change
   useEffect(() => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
   }, [cartItems]);

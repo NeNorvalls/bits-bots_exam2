@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Bits & Bots
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"This project exam2 uses React for the frontend, Sass as the CSS preprocessor with BEM and DRY principles, and Bootstrap/React-Bootstrap for UI components. It integrates a headless WordPress CMS for content management and API, resulting in an efficient web application."# Bits & Bots
 
-## Available Scripts
+- [x] Research information
+- [x] Planning Design
+- [x] Adobe XD style guide
+- [x] Adobe Desktop Version
+- [x] Prototype the Desktop Version
+- [x] Adobe Mobile Version
+- [x] Prototype the Mobile Version
+- [x] Wordpress Headless CMS
+- [x] Adding game images and data
+- [x] Creating React repository on GitHub
+- [x] Creating the landing page
+- [x] Creating image slider
+- [x] Creating a login form
+- [x] Creating registration form
+- [x] Adding validation for registration
+- [x] Creating header
+- [x] Creating navbar
+- [x] Adding brand name
+- [x] Hiding the navbar on the landing page, visible only to authenticated users
+- [x] Creating the browse page
+- [x] Creating search functionality
+- [x] Creating category dropdown
+- [x] Fetching data from the Headless CMS
+- [x] Creating car page
+- [x] Creating checkout
+- [x] Adding and creating product details
+- [x] Creating checkout success page
+- [x] Arranging cards and ensuring responsiveness for smaller devices
+- [x] Adding hamburger menu for smaller devices, hiding it on the landing page
+- [x] Testing and fixing errors
+- [x] Adding content to README file
 
-In the project directory, you can run:
+## REQUIRED FORMAT LINKS
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Resource         | URL                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| Gantt Chart      | [Gantt Chart URL](<file:///C:/Users/honey/Downloads/Bits%20&amp%3B%20Bots%20(2).pdf>)     |
+| Design Prototype | [Desktop Prototype](https://xd.adobe.com/view/cde56c69-c26d-4fd9-8393-4e180d2bea64-98b6/) |
+| Design Prototype | [Mobile Prototype](https://xd.adobe.com/view/8610cd1a-75a0-48a6-be37-c57c2ca5e323-d343/)  |
+| Style Guide      | [Style Guide](https://xd.adobe.com/view/8072be7c-e4f6-4f8e-86b8-ed5fc2f4b7b2-d521/)       |
+| Kanban Board     | [Project Board Link](https://app.ganttpro.com/#/project/1695031576177/board)              |
+| Repository       | [Github Project Repository](https://github.com/NeNorvalls/bits_and_bots_final_exam2.git)  |
+| Hosted Demo      | [Netlify Link](https://bits-and-bots.netlify.app/)                                        |
