@@ -13,6 +13,7 @@ import RegisterForm from "./auth/Register/Register";
 import { CartProvider } from "./utils/CartContext/cartContext";
 import "./App.scss";
 import Modal from "react-modal";
+import { GoBackButton } from "./utils/GoBackPage/GoBackPage.jsx";
 
 const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -50,6 +51,7 @@ const App = () => {
             element={<Logout setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
+        <GoBackButton />
         <ScrollToTop />
         <Footer />
       </CartProvider>
