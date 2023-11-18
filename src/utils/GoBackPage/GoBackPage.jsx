@@ -2,7 +2,7 @@ import React from 'react';
 import './GoBackButton.scss';
 
 const handleGoBackToPortfolio = () => {
-  window.location.href = "https://nenorvalls-frontend-fusions.netlify.app/";
+  window.location.href = "https://nenorvalls-portfolio.netlify.app/";
 };
 
 const GoBackButton = () => (
