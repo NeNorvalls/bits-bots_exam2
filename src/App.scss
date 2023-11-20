@@ -33,3 +33,23 @@ p {
 .button {
   font-family: $font-roboto, $font-helvetica, $font-arial;
 }
+
+#portfolioText {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 1rem;
+  letter-spacing: 2px;
+}
+
+.portfolioLink {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: #8b0000;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.portfolioLink:hover {
+  color:darkmagenta;
+}
