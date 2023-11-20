@@ -87,7 +87,7 @@ const RegisterForm = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  id="registerEmail"
                   name="email"
                   className="form-control register-form__input"
                   value={formData.email}
@@ -102,7 +102,7 @@ const RegisterForm = () => {
                 </label>
                 <input
                   type="password"
-                  id="password"
+                  id="registerPassword"
                   name="password"
                   className="form-control register-form__input"
                   value={formData.password}

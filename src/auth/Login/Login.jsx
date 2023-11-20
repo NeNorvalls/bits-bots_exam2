@@ -46,7 +46,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
                 </label>
                 <input
                   type="text"
-                  id="email"
+                  id="loginEmail"
                   name="email"
                   className="form-control login-form__input"
                   value={formData.email}
@@ -60,7 +60,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
                 </label>
                 <input
                   type="password"
-                  id="password"
+                  id="loginPassword"
                   name="password"
                   className="form-control login-form__input"
                   value={formData.password}
